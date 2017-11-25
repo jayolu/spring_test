@@ -5,11 +5,15 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-@Service
+//@Service
 public class UseFunctionService {
     //@Autowired
-    @Resource
+    //@Resource
     FunctionService functionService;
+
+    public void setFunctionService(FunctionService functionService) {
+        this.functionService = functionService;
+    }
 
     public String sayHello(String word) {
         return functionService.sayHello(word);

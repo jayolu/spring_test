@@ -12,4 +12,13 @@ public class IocTest {
         System.out.println(useFuntionService.sayHello("world"));
         context.close();
     }
+
+    @Test
+    public void testJavaIoc() {
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+        UseFunctionService useFuntionService = context.getBean(UseFunctionService.class);
+        System.out.println(useFuntionService.sayHello("world"));
+        context.close();
+    }
 }
